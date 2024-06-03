@@ -1,0 +1,26 @@
+{
+  "actions": {
+    "create": "Agregar Campo"
+  },
+  "datatable": {
+    "label": {
+      "description": "Descripción",
+      "hectares": "Hectáreas"
+    }
+  },
+  "create": {
+    "label": {
+      "description": "Descripción",
+      "hectares": "Hectáreas"
+    },
+    "title": "Añadir campo",
+    "button": {
+      "submit": "Añadir campo"
+    }
+  },
+  "toast": {
+    "create": {
+      "success": "Campo añadido con exito"
+    }
+  }
+}

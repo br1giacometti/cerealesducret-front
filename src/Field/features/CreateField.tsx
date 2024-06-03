@@ -21,36 +21,37 @@ import {
 } from "@chakra-ui/react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 
-import useEffectAuth from "Product/hooks/useEffectAuth";
+import useEffectAuth from "Field/hooks/useEffectAuth";
 
 import { useTranslation } from "Base/i18n";
-import useCreateProductService from "Field/data/FieldRepository/hooks/useCreateFieldService";
-import ErrorMessageTop from "Product/components/ErrorMessageTop";
-import createProductSchema, {
-  CreateProductSchema,
-} from "Product/schemas/createProductSchema";
+import useCreateFieldService from "Field/data/FieldRepository/hooks/useCreateFieldService";
+import ErrorMessageTop from "Field/components/ErrorMessageTop";
+
 import FormPageLayout from "Base/layout/FormPageLayout";
 import FormContainerLayout from "Base/layout/FormContainerLayout";
 import FormSectionLayout from "Base/layout/FormSectionLayout";
 import { FormInputText } from "Base/components";
 import FormInputNumber from "Base/components/FormInputNumber";
+import createFieldSchema, {
+  CreateFieldSchema,
+} from "Field/schemas/createProductSchema";
 
-interface CreateProductProps {
-  navigateToProduct: () => void;
+interface CreateFieldProps {
+  navigateToField: () => void;
 }
 
-const CreateProduct = ({ navigateToProduct }: CreateProductProps) => {
-  const { t } = useTranslation("product");
+const CreateField = ({ navigateToField }: CreateFieldProps) => {
+  const { t } = useTranslation("field");
   const toast = useToast();
   const {
     control,
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<CreateProductSchema>({
-    resolver: zodResolver(createProductSchema),
+  } = useForm<CreateFieldSchema>({
+    resolver: zodResolver(createFieldSchema),
   });
-  const [body, setBody] = useState<CreateProductSchema | null>(null);
+  const [body, setBody] = useState<CreateFieldSchema | null>(null);
 
   const onSignUp = useCallback(
     (error?: string) => {
@@ -65,22 +66,20 @@ const CreateProduct = ({ navigateToProduct }: CreateProductProps) => {
         status: "success",
         description: t("toast.create.success"),
       });
-      navigateToProduct();
+      navigateToField();
     },
-    [navigateToProduct, toast]
+    [navigateToField, toast]
     // [navigateToSignIn, toast]
   );
 
-  const { loading } = useCreateProductService(body, onSignUp);
+  const { loading } = useCreateFieldService(body, onSignUp);
 
-  const [showPassword, setShowPassword] = useState<boolean>(false);
-
-  const handleCreateProduct = (data: CreateProductSchema) => {
+  const handleCreateField = (data: CreateFieldSchema) => {
     setBody(data);
   };
 
   return (
-    <FormPageLayout onSubmit={handleSubmit(handleCreateProduct)}>
+    <FormPageLayout onSubmit={handleSubmit(handleCreateField)}>
       <FormContainerLayout>
         <FormSectionLayout>
           <FormInputText
@@ -101,35 +100,15 @@ const CreateProduct = ({ navigateToProduct }: CreateProductProps) => {
             isRequired
             control={control as any}
             errorMessage={
-              errors.buyPrice
-                ? (t(`errors.${errors.buyPrice.message}`, {
+              errors.hectares
+                ? (t(`errors.${errors.hectares.message}`, {
                     ns: "common",
                   }) as string)
                 : undefined
             }
-            id="buyPrice"
-            label={t("create.label.buyPrice")}
-            leftIcon="$"
-            name="buyPrice"
-            thousandSeparator="."
-            type="number"
-          />
-
-          <FormInputNumber
-            isRequired
-            control={control as any}
-            errorMessage={
-              errors.sellPrice
-                ? (t(`errors.${errors.sellPrice.message}`, {
-                    ns: "common",
-                  }) as string)
-                : undefined
-            }
-            id="sellPrice"
-            label={t("create.label.sellPrice")}
-            leftIcon="$"
-            name="sellPrice"
-            thousandSeparator="."
+            id="hectares"
+            label={t("create.label.hectares")}
+            name="hectares"
             type="number"
           />
         </FormSectionLayout>
@@ -149,4 +128,4 @@ const CreateProduct = ({ navigateToProduct }: CreateProductProps) => {
   );
 };
 
-export default CreateProduct;
+export default CreateField;

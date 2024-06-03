@@ -3,8 +3,8 @@ import { useMemo } from "react";
 import { useTranslation } from "Base/i18n";
 import DataTable, { BaseColumn } from "Base/components/DataTable";
 
-import { Product, useAllProductService } from "Product/data/ProductRepository";
 import formatDate from "Base/utils/formatters/formatDate";
+import { Product, useAllProductService } from "Product/data/ProductRepository";
 
 const ProductList = () => {
   const { t } = useTranslation("product");

@@ -3,7 +3,12 @@ import i18n, { ResourceKey } from "i18next";
 import { initReactI18next } from "react-i18next";
 
 export type AppTranslations = {
-  [namespace in "appLayout" | "auth" | "common" | "product"]: ResourceKey;
+  [namespace in
+    | "appLayout"
+    | "auth"
+    | "common"
+    | "product"
+    | "field"]: ResourceKey;
 };
 
 type Resource = {
@@ -19,12 +24,14 @@ const resources: Resource = {
     auth: require("./locales/en/auth.json"),
     common: require("./locales/en/common.json"),
     product: require("./locales/en/product.json"),
+    field: require("./locales/en/field.json"),
   },
   es: {
     appLayout: require("./locales/es/appLayout.json"),
     auth: require("./locales/es/auth.json"),
     common: require("./locales/es/common.json"),
     product: require("./locales/es/product.json"),
+    field: require("./locales/es/field.json"),
   },
 };
 

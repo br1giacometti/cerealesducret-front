@@ -4,6 +4,7 @@ import { Box, Flex, Stack } from "@chakra-ui/react";
 import {
   HomeModernIcon,
   RectangleStackIcon,
+  Square3Stack3DIcon,
 } from "@heroicons/react/24/outline";
 
 import { SidebarProvider } from "Base/contexts/SidebarContext";
@@ -26,6 +27,11 @@ const AppLayout = ({ children }: PropsWithChildren) => {
       title: t("sidebar.menu.product"),
       path: "/product",
       icon: RectangleStackIcon,
+    },
+    {
+      title: t("sidebar.menu.field"),
+      path: "/field",
+      icon: Square3Stack3DIcon,
     },
   ];
 

@@ -9,7 +9,8 @@
   "sidebar": {
     "menu": {
       "home": "Home",
-      "product": "Products"
+      "product": "Products",
+      "field": "Fields"
     }
   }
 }
