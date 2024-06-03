@@ -8,7 +8,8 @@
   },
   "sidebar": {
     "menu": {
-      "home": "Inicio"
+      "home": "Inicio",
+      "product": "Productos"
     }
   }
 }

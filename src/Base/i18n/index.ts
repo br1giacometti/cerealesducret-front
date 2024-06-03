@@ -3,7 +3,7 @@ import i18n, { ResourceKey } from "i18next";
 import { initReactI18next } from "react-i18next";
 
 export type AppTranslations = {
-  [namespace in "appLayout" | "auth" | "common"]: ResourceKey;
+  [namespace in "appLayout" | "auth" | "common" | "product"]: ResourceKey;
 };
 
 type Resource = {
@@ -18,11 +18,13 @@ const resources: Resource = {
     appLayout: require("./locales/en/appLayout.json"),
     auth: require("./locales/en/auth.json"),
     common: require("./locales/en/common.json"),
+    product: require("./locales/en/product.json"),
   },
   es: {
     appLayout: require("./locales/es/appLayout.json"),
     auth: require("./locales/es/auth.json"),
     common: require("./locales/es/common.json"),
+    product: require("./locales/es/product.json"),
   },
 };
 

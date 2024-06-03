@@ -1,7 +1,10 @@
 import { PropsWithChildren } from "react";
 import { Box, Flex, Stack } from "@chakra-ui/react";
 
-import { HomeModernIcon, ShareIcon } from "@heroicons/react/24/outline";
+import {
+  HomeModernIcon,
+  RectangleStackIcon,
+} from "@heroicons/react/24/outline";
 
 import { SidebarProvider } from "Base/contexts/SidebarContext";
 import { DrawerProvider } from "Base/contexts/DrawerContext";
@@ -20,9 +23,9 @@ const AppLayout = ({ children }: PropsWithChildren) => {
       icon: HomeModernIcon,
     },
     {
-      title: "Cool feature",
-      path: "/example",
-      icon: ShareIcon,
+      title: t("sidebar.menu.product"),
+      path: "/product",
+      icon: RectangleStackIcon,
     },
   ];
 
