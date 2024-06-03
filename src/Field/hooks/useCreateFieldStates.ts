@@ -1,19 +1,19 @@
 import { useReducer } from "react";
 
-import { Product } from "Field/data/FieldRepository";
+import { Field } from "Field/data/FieldRepository";
 import FetchActionTypes from "Base/types/FetchActionTypes";
-import createProductReducer from "Field/data/FieldRepository/reducer/createProductReducer";
+import createFieldReducer from "Field/data/FieldRepository/reducer/createFieldReducer";
 import { initialState } from "Field/data/FieldRepository/reducer/listFieldReducer";
 
-const useCreateProductStates = () => {
+const useCreateFieldStates = () => {
   const [{ loading, error }, dispatch] = useReducer(
-    createProductReducer,
+    createFieldReducer,
     initialState
   );
 
   const startFetch = () => dispatch({ type: FetchActionTypes.Start });
 
-  const successFetch = (payload: Product) =>
+  const successFetch = (payload: Field) =>
     dispatch({ type: FetchActionTypes.Succeess, payload });
 
   const failureFetch = (errorMessage: string) =>
@@ -25,4 +25,4 @@ const useCreateProductStates = () => {
   return { loading, error, startFetch, successFetch, failureFetch };
 };
 
-export default useCreateProductStates;
+export default useCreateFieldStates;

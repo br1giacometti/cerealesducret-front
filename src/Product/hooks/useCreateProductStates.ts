@@ -1,9 +1,9 @@
 import { useReducer } from "react";
 
-import { Product } from "Field/data/FieldRepository";
+import { Product } from "Product/data/ProductRepository";
 import FetchActionTypes from "Base/types/FetchActionTypes";
-import createProductReducer from "Field/data/FieldRepository/reducer/createProductReducer";
-import { initialState } from "Field/data/FieldRepository/reducer/listFieldReducer";
+import createProductReducer from "Product/data/ProductRepository/reducer/createProductReducer";
+import { initialState } from "Product/data/ProductRepository/reducer/listProductReducer";
 
 const useCreateProductStates = () => {
   const [{ loading, error }, dispatch] = useReducer(

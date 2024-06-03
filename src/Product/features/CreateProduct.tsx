@@ -1,31 +1,12 @@
 import { useCallback, useState } from "react";
 
-import { useAuthMethods, useAuthStatus } from "@kushitech/auth-module";
-
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import {
-  Stack,
-  Flex,
-  FormControl,
-  FormLabel,
-  Input,
-  Button,
-  InputGroup,
-  InputRightElement,
-  FormErrorMessage,
-  Box,
-  useToast,
-  Heading,
-} from "@chakra-ui/react";
-import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-
-import useEffectAuth from "Product/hooks/useEffectAuth";
+import { Button, useToast } from "@chakra-ui/react";
 
 import { useTranslation } from "Base/i18n";
-import useCreateProductService from "Field/data/FieldRepository/hooks/useCreateFieldService";
-import ErrorMessageTop from "Product/components/ErrorMessageTop";
+
 import createProductSchema, {
   CreateProductSchema,
 } from "Product/schemas/createProductSchema";
@@ -34,6 +15,7 @@ import FormContainerLayout from "Base/layout/FormContainerLayout";
 import FormSectionLayout from "Base/layout/FormSectionLayout";
 import { FormInputText } from "Base/components";
 import FormInputNumber from "Base/components/FormInputNumber";
+import { useCreateProductService } from "Product/data/ProductRepository";
 
 interface CreateProductProps {
   navigateToProduct: () => void;
@@ -72,8 +54,6 @@ const CreateProduct = ({ navigateToProduct }: CreateProductProps) => {
   );
 
   const { loading } = useCreateProductService(body, onSignUp);
-
-  const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const handleCreateProduct = (data: CreateProductSchema) => {
     setBody(data);

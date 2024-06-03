@@ -34,7 +34,7 @@ import { FormInputText } from "Base/components";
 import FormInputNumber from "Base/components/FormInputNumber";
 import createFieldSchema, {
   CreateFieldSchema,
-} from "Field/schemas/createProductSchema";
+} from "Field/schemas/createFieldSchema";
 
 interface CreateFieldProps {
   navigateToField: () => void;

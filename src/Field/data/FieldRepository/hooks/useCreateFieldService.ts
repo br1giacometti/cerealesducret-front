@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import { CreateFieldSchema } from "Field/schemas/createFieldSchema";
 import createFieldService from "../services/createField";
-import { CreateFieldSchema } from "Field/schemas/createProductSchema";
 
 const useCreateFieldService = (
   body: CreateFieldSchema | null,

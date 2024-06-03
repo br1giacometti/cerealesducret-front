@@ -1,4 +1,4 @@
-import { CreateFieldSchema } from "Field/schemas/createProductSchema";
+import { CreateFieldSchema } from "Field/schemas/createFieldSchema";
 
 export interface Field {
   description: string;
