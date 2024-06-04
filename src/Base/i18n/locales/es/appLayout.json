@@ -10,7 +10,8 @@
     "menu": {
       "home": "Inicio",
       "product": "Productos",
-      "field": "Campos"
+      "field": "Campos",
+      "aplicator": "Aplicadores"
     }
   }
 }

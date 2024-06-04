@@ -1,3 +1,3 @@
-export { default as CreateDebtCollector } from "./CreateDebtCollector";
-export { default as DebtCollectorHeader } from "./DebtCollectorHeader";
-export { default as DebtCollectorList } from "./DebtCollectorList";
+export { default as CreateProduct } from "./CreateProduct";
+export { default as ProductHeader } from "./ProductHeader";
+export { default as ProductList } from "./ProductList";

@@ -10,7 +10,8 @@
     "menu": {
       "home": "Home",
       "product": "Products",
-      "field": "Fields"
+      "field": "Fields",
+      "aplicator": "Aplicactors"
     }
   }
 }
