@@ -8,7 +8,8 @@ export type AppTranslations = {
     | "auth"
     | "common"
     | "product"
-    | "field"]: ResourceKey;
+    | "field"
+    | "aplicator"]: ResourceKey;
 };
 
 type Resource = {
@@ -25,6 +26,7 @@ const resources: Resource = {
     common: require("./locales/en/common.json"),
     product: require("./locales/en/product.json"),
     field: require("./locales/en/field.json"),
+    aplicator: require("./locales/en/aplicator.json"),
   },
   es: {
     appLayout: require("./locales/es/appLayout.json"),
@@ -32,6 +34,7 @@ const resources: Resource = {
     common: require("./locales/es/common.json"),
     product: require("./locales/es/product.json"),
     field: require("./locales/es/field.json"),
+    aplicator: require("./locales/es/aplicator.json"),
   },
 };
 
