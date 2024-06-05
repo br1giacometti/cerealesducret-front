@@ -1,7 +1,6 @@
 import { z } from "zod";
-import createBatchSchema from "./createBatchSchema";
 
-const createFieldSchema = z.object({
+const createBatchSchema = z.object({
   description: z.string().min(2, { message: "nameMustBeAtleast3" }),
   hectares: z.string().transform((val, ctx) => {
     const parsed = Number.parseInt(val.replaceAll(".", ""), 10);
@@ -23,9 +22,8 @@ const createFieldSchema = z.object({
     }
     return parsed;
   }),
-  batches: z.array(createBatchSchema),
 });
 
-export type CreateFieldSchema = z.infer<typeof createFieldSchema>;
+export type CreateBatchSchema = z.infer<typeof createBatchSchema>;
 
-export default createFieldSchema;
+export default createBatchSchema;

@@ -16,8 +16,8 @@
     "@chakra-ui/icons": "2.0.17",
     "@chakra-ui/react": "^2.8.2",
     "@chakra-ui/theme-tools": "2.0.17",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@heroicons/react": "2.0.15",
     "@hookform/resolvers": "3.3.1",
     "@kushitech/auth-module": "1.1.4",
@@ -32,6 +32,7 @@
     "react-hook-form": "^7.45.2",
     "react-i18next": "12.3.1",
     "react-number-format": "^5.2.2",
+    "swiper": "^11.1.4",
     "zod": "3.21.4"
   },
   "devDependencies": {

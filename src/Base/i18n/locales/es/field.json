@@ -22,5 +22,22 @@
     "create": {
       "success": "Campo añadido con exito"
     }
+  },
+  "createBatch": {
+    "carousel": {
+      "title:": "Añadir Lote",
+      "description": "Descripción",
+      "hectares": "Hectáreas",
+
+      "addBatch": "Añadir Lote"
+    }
+  },
+  "modal": {
+    "button": {
+      "buttonConfirm": "Confirmar",
+      "buttonCancel": "Cancelar"
+    },
+    "title": "Añadir nuevo campo",
+    "description": "¿Esta seguro que desea añadir el campo?"
   }
 }

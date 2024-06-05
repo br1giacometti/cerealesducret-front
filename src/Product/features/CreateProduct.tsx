@@ -49,8 +49,7 @@ const CreateProduct = ({ navigateToProduct }: CreateProductProps) => {
       });
       navigateToProduct();
     },
-    [navigateToProduct, toast]
-    // [navigateToSignIn, toast]
+    [navigateToProduct, t, toast]
   );
 
   const { loading } = useCreateProductService(body, onSignUp);
