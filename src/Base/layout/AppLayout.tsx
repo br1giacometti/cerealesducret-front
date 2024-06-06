@@ -6,6 +6,7 @@ import {
   RectangleStackIcon,
   Square3Stack3DIcon,
   UsersIcon,
+  BriefcaseIcon,
 } from "@heroicons/react/24/outline";
 
 import { SidebarProvider } from "Base/contexts/SidebarContext";
@@ -38,6 +39,11 @@ const AppLayout = ({ children }: PropsWithChildren) => {
       title: t("sidebar.menu.aplicator"),
       path: "/aplicator",
       icon: UsersIcon,
+    },
+    {
+      title: t("sidebar.menu.warehouse"),
+      path: "/warehouse",
+      icon: BriefcaseIcon,
     },
   ];
 
