@@ -45,6 +45,11 @@ const AppLayout = ({ children }: PropsWithChildren) => {
       path: "/warehouse",
       icon: BriefcaseIcon,
     },
+    {
+      title: t("sidebar.menu.movements"),
+      path: "/movements",
+      icon: BriefcaseIcon,
+    },
   ];
 
   return (

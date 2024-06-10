@@ -12,7 +12,8 @@
       "product": "Products",
       "field": "Fields",
       "aplicator": "Aplicactors",
-      "warehouse": "Warehouse"
+      "warehouse": "Warehouse",
+      "movements": "Movements"
     }
   }
 }

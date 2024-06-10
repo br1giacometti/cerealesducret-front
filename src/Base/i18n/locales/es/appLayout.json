@@ -12,7 +12,8 @@
       "product": "Productos",
       "field": "Campos",
       "aplicator": "Aplicadores",
-      "warehouse": "Almacén"
+      "warehouse": "Almacén",
+      "movements": "Movimientos"
     }
   }
 }
